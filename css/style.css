@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Genshin_Impact";
+    src: url('../fonts/Genshin_Impact.ttf') format('truetype');
+}
+@keyframes rainbow-move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 400% 50%;
+    }
+}
+body {
+    font-family: "Genshin_Impact";
+    background: linear-gradient(to bottom, #e8e4ff 0%, #ffffff 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.maintxt {
+    font-family: "Genshin_Impact";
+    text-align: center;
+    font-size: 65px;
+    margin-top: 200px;
+}
+.rainbow-text {
+    background: linear-gradient(90deg,
+            #f7b1f3, #a35ee4, #7758ff, #86c8ee,
+            #8492e4, #cb9fe9, #f8c0f1);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-move 7s linear infinite;
+}
+button.genshin-button {
+    background: #5ca2f1;
+    color: #ffffff;
+    padding: 15px 21px;
+    /* Внутренние отступы - увеличивают размер */
+    border-radius: 10px;
+    /* Закругленные края */
+    border: none;
+    /* Убирает стандартную рамку */
+    font-size: 12px;
+    /* Размер текста */
+    cursor: pointer;
+    display: block;
+    /* Блочный элемент */
+    margin: 0 auto;
+    margin-top: 50px;
+}
+button.genshin-button2 {
+    border-radius: 10px;
+    font-size: 12px;
+    margin-top: 15px;
+    color: #ffffff;
+    background-color: #5ca2f1;
+    margin-right: 10px;
+    margin-left: 1350px;
+    align-items: right;
+    padding: 11px 17px;
+}
+button.genshin-button2:hover {
+    background-color: #8ebbff;
+    /* Новый цвет */
+}
+.hoyo-img {
+    margin-top: 20px;
+    margin-left: 38px;
+    width: 175px;
+}
+.topb {
+    position: static;
+    background-color: #ffffff;
+    height: 70px;
+}
+.help {
+    margin-top: 30px;
+    margin-left: 40px;
+    background-color: #ffffff;
+}
+button.help:hover {
+    color: #8ebbff;
+}
+button.genshin-button:hover {
+    background-color: #8ebbff;
+}
+.container {
+    display: grid;
+    /* Используем CSS Grid для расположения карточек */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Авто-разметка колонок, минимальная ширина 320px, 
+    растягиваем по доступному месту */
+    justify-content: center;
+    /* Центрируем всю сетку по горизонтали */
+    max-width: 1200px;
+    /* Центрируем всю сетку по горизонтали */
+    margin: 0px auto;
+    /* Центрируем всю сетку по горизонтали */
+    padding: 58px 0 30px 0;
+    /* Центрируем всю сетку по горизонтали */
+}
+
+.text-and-photo-in-card {
+    max-width: 450px;
+    /* Максимальная ширина карточки */
+    background-color: hsla(0, 0%, 100%, .5);
+    /* Полупрозрачный белый фон */
+    text-align: left;
+    /* Текст выравнивается по левому краю */
+    padding: 24px 28px;
+    /* Внутренние отступы */
+    line-height: 28px;
+    /* Расстояние между строками */
+    margin: 0 16px 64px 16px;
+    /* Внешние отступы: слева, справа, снизу */
+    border-radius: 15px;
+    /* Закруглённые углы */
+    box-shadow: 0 6px 16px -2px rgba(54, 85, 178, .12);
+    /* Тень для объёма */
+}
+
+.text-and-photo-in-card img {
+    margin-bottom: 16px
+        /* Отступ снизу, чтобы текст не прилегал к картинке */
+}
+
+.text-and-photo-in-card h3 {
+    color: #4f91dd;
+    font-size: 24px;
+    margin-bottom: 16px;
+    /* Отступ снизу */
+    font-weight: 700;
+    /* Жирность текста */
+    line-height: 28px;
+    /* Расстояние между строками */
+}
+
+.text-and-photo-in-card h4 {
+    font-size: 16px;
+    /* Размер шрифта */
+    line-height: 24px;
+    /* Расстояние между строками */
+    color: #3C3F44;
+}
+.tx4 {
+    text-align: center;
+}
+.anim{
+    width: 200px; 
+    height: auto;
+    margin-top: 60px;
+}
+@keyframes scroll-adaptive {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+@-webkit-keyframes scroll-adaptive {
+    0% { -webkit-transform: translateX(0); }
+    100% { -webkit-transform: translateX(-50%); }
+}
+.gallery-track {
+    
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    animation: scroll-loop 40s linear infinite;
+    -webkit-animation: scroll-adaptive 40s linear infinite;
+}
+.anim1{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    clip-path: inset(0 40px);
+}
+footer {
+    margin-bottom: 0px;
+    margin-top: auto;
+}
+.foter {
+    height: 100px;
+    margin-top: 300px;
+    background-color: #1f1f1f;
+    position: relative;
+    font-size: 25px;
+
+}
+.tt {
+    margin-bottom: 0px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 50px;
+    /* Отступ от низа футера */
+    width: 100%;
+}
