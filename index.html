@@ -6,7 +6,9 @@
     <title>Genshin Impact</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="app.js" defer></script>
     <link rel="icon" type="image/png" href="img/hoyoverse-logo.png">
+
 </head>
 <body>
     <div class="topb">
@@ -22,9 +24,47 @@
     <div class="maintxt">
         <h1> Одна <span class="rainbow-text">Учётная запись</span><br>для всего на<br> HoYoverse</h1>
     </div>
-    <a href="https://account.hoyoverse.com/passport/index.html#/login" target="_blank">
-        <button class="genshin-button"> Войти →</button>
-    </a>
+
+        <button  class="genshin-button" onclick="openLoginModal()"> Войти →</button>
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        
+        <form id="loginForm" class="login-form">
+            <img src="img/top-txt.png" class="hoyo-img2">
+            <h2>Войти в учетную запись</h2>
+            
+            <div class="input-group">
+                <label for="username">Логин или email</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="options">
+                <label class="remember">
+                    <input type="checkbox" name="remember"> Запомнить меня
+                </label>
+                <a href="#" class="forgot-password">Забыли пароль?</a>
+            </div>
+            
+            <button type="submit" class="login-btn">Войти</button>
+            
+            <div class="register-link">
+                Нет аккаунта? <a href="#">Зарегистрироваться</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
     <div class="container">
         <div class="text-and-photo-in-card">
             <img src="img/ic2.png" width="80" loading="lazy">
@@ -45,7 +85,9 @@
             </h4>
         </div>
     </div>
+
     <div class="tx4">Всё под рукой</div>
+
     <div class="anim1">
     <div class="gallery-track"> 
         <img src="img/сяо спрайт.png" class="anim" >
@@ -63,10 +105,12 @@
         <img src="img/сяо спрайт.png" class="anim" >
     </div>
     </div>
+
     <footer>
         <div class="foter">
             <div class="tt"> Права принадлежат Hoyoverse© </div>
         </div>
     </footer>
+
 </body>
 </html>
