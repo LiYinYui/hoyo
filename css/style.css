@@ -20,8 +20,9 @@ body {
     margin: 0;
     padding: 0;
 }
+/* стиль для всех надписей */
 .maintxt {
-    font-family: "Genshin_Impact";
+    font-family: "Genshin_Impact"; 
     text-align: center;
     font-size: 65px;
     margin-top: 200px;
@@ -36,38 +37,161 @@ body {
     color: transparent;
     animation: rainbow-move 7s linear infinite;
 }
+/* два блока сверху относяться к главной надписи */
+
 button.genshin-button {
     background: #5ca2f1;
     color: #ffffff;
     padding: 15px 21px;
-    /* Внутренние отступы - увеличивают размер */
     border-radius: 10px;
-    /* Закругленные края */
     border: none;
-    /* Убирает стандартную рамку */
     font-size: 12px;
-    /* Размер текста */
     cursor: pointer;
     display: block;
-    /* Блочный элемент */
     margin: 0 auto;
     margin-top: 50px;
 }
+button.genshin-button:hover {
+    background-color: #8ebbff;
+}
+
+
+/* Стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+}
+.modal-content {
+    background: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    height: 550px;
+    box-shadow: 0 10px 30px #0000004d;
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+.close:hover {
+    color: #000;
+}
+/* Стили формы (из предыдущего ответа) */
+.hoyo-img2{
+    width: 200px;
+    margin-left: 25%;
+}
+.login-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    font-size: 25px;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+.input-group input:focus {
+    border-color: #5ca2f1;
+    outline: none;
+}
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.remember {
+    display: flex;
+    align-items: center;
+}
+.remember input {
+    margin-right: 5px;
+}
+.forgot-password {
+    color: #5ca2f1;
+    text-decoration: none;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #5ca2f1, #4a90e2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: "Genshin_Impact", sans-serif;
+}
+.login-btn:hover {
+    background: linear-gradient(135deg, #4a90e2, #5ca2f1);
+    transform: translateY(-2px);
+}
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.register-link a {
+    color: #5ca2f1;
+    text-decoration: none;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}
+/* стили для окна */
+/* для кнопки войти */
+
 button.genshin-button2 {
     border-radius: 10px;
     font-size: 12px;
-    margin-top: 15px;
+    margin-top: 1%;
     color: #ffffff;
     background-color: #5ca2f1;
-    margin-right: 10px;
-    margin-left: 1350px;
-    align-items: right;
     padding: 11px 17px;
+    
+    position: absolute; /* позиционируется относительно <html>*/ 
+    right: 20px;
+    top: 1px; 
 }
 button.genshin-button2:hover {
     background-color: #8ebbff;
-    /* Новый цвет */
 }
+/* кнопка авторизации */
 .hoyo-img {
     margin-top: 20px;
     margin-left: 38px;
@@ -86,70 +210,50 @@ button.genshin-button2:hover {
 button.help:hover {
     color: #8ebbff;
 }
-button.genshin-button:hover {
-    background-color: #8ebbff;
-}
+/* кнопка помощи */
+
 .container {
     display: grid;
-    /* Используем CSS Grid для расположения карточек */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    /* Авто-разметка колонок, минимальная ширина 320px, 
-    растягиваем по доступному месту */
     justify-content: center;
-    /* Центрируем всю сетку по горизонтали */
     max-width: 1200px;
-    /* Центрируем всю сетку по горизонтали */
     margin: 0px auto;
-    /* Центрируем всю сетку по горизонтали */
     padding: 58px 0 30px 0;
-    /* Центрируем всю сетку по горизонтали */
 }
 
 .text-and-photo-in-card {
     max-width: 450px;
-    /* Максимальная ширина карточки */
     background-color: hsla(0, 0%, 100%, .5);
-    /* Полупрозрачный белый фон */
     text-align: left;
-    /* Текст выравнивается по левому краю */
     padding: 24px 28px;
-    /* Внутренние отступы */
     line-height: 28px;
-    /* Расстояние между строками */
     margin: 0 16px 64px 16px;
-    /* Внешние отступы: слева, справа, снизу */
     border-radius: 15px;
-    /* Закруглённые углы */
     box-shadow: 0 6px 16px -2px rgba(54, 85, 178, .12);
-    /* Тень для объёма */
 }
 
 .text-and-photo-in-card img {
     margin-bottom: 16px
-        /* Отступ снизу, чтобы текст не прилегал к картинке */
 }
-
+/* иконки */
 .text-and-photo-in-card h3 {
     color: #4f91dd;
     font-size: 24px;
     margin-bottom: 16px;
-    /* Отступ снизу */
-    font-weight: 700;
-    /* Жирность текста */
+    font-weight: 200;
     line-height: 28px;
-    /* Расстояние между строками */
 }
-
+/* оглавление */
 .text-and-photo-in-card h4 {
     font-size: 16px;
-    /* Размер шрифта */
     line-height: 24px;
-    /* Расстояние между строками */
     color: #3C3F44;
 }
+/* основной текст */
 .tx4 {
     text-align: center;
 }
+/* доп надпись */
 .anim{
     width: 200px; 
     height: auto;
@@ -177,6 +281,7 @@ button.genshin-button:hover {
     position: relative;
     clip-path: inset(0 40px);
 }
+/* анимация */
 footer {
     margin-bottom: 0px;
     margin-top: auto;
@@ -194,6 +299,6 @@ footer {
     color: #ffffff;
     position: absolute;
     bottom: 50px;
-    /* Отступ от низа футера */
     width: 100%;
 }
+/* текст футера */
